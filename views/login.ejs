@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="/javascripts/scripts.js"></script>
+
+
+</head>
+<body>
+
+<%include navbar %>
+
+	<div class="container">
+		<div class="row">
+			<div class="text-danger col-sm-12 text-center">
+				<form action="/processLogin" method="post">
+					<input type="email" placeholder="Enter Email" name="email"/>
+					<input type="password" placeholder="Enter Password" name="password"/>
+					<button type="submit" class="btn btn-primary">Login</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
