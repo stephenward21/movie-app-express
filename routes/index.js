@@ -49,6 +49,7 @@ router.post('/search', (req, res)=>{
 	// });
 
 	request.get(searchUrl,(error,response,movieData)=>{
+
 		var movieData = JSON.parse(movieData);
 		res.render('movie_list', { 
 			movieData: movieData.results,
@@ -72,6 +73,7 @@ router.get('/movie/:id', (req,res)=>{
 
 	request.get(thisMovieUrl,(error,response,movieData)=>{
 		request.get(thisCastUrl,(error,response,castData)=>{
+			// console.log(thisMovieId);
 			var newMovieData = JSON.parse(movieData);
 			var newCastData = JSON.parse(castData);
 			// res.json(castData);
